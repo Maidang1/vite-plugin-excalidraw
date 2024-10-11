@@ -1,13 +1,13 @@
 {
 	"version": "0.0.0",
-	"name": "vite-plugin-name",
-	"description": "开箱即用的 vite 插件模板",
+	"name": "vite-plugin-excalidraw",
+	"description": "treat excalidraw files as modules in Vite",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/name/repo.git"
+		"url": "git+https://github.com/Maidang1/vite-plugin-excalidraw.git"
 	},
 	"exports": {
 		"./*": "./*",
@@ -26,7 +26,7 @@
 		"test": "vitest",
 		"test:watch": "vitest --watch",
 		"coverage": "vitest --coverage",
-		"dev": "pnpm run build -- --watch",
+		"dev": "pnpm run build --watch",
 		"init:info": "plop --plopfile scripts/init.js",
 		"release": "npm run build && bumpp --commit --push --tag && npm publish",
 		"play": "pnpm -C examples/vite run dev",
@@ -40,27 +40,31 @@
 	"keywords": [
 		"vite",
 		"plugin",
-		"template"
+		"excalidraw"
 	],
 	"author": {
-		"name": "name",
-		"email": "xx@xx.com",
-		"url": "https://github.com/name"
+		"name": "madinah",
+		"email": "maidang@felixwliu.cn",
+		"url": "https://github.com/Maidang1"
 	},
 	"bugs": {
-		"email": "xx@xx.com",
-		"url": "https://github.com/name/repo/issues"
+		"email": "maidang@felixwliu.cn",
+		"url": "https://github.com/Maidang1/vite-plugin-excalidraw/issues"
 	},
 	"license": "MIT",
+	"peerDependencies": {
+		"@excalidraw/excalidraw": ">=0.17.6"
+	},
 	"devDependencies": {
+		"@excalidraw/excalidraw": "^0.17.6",
 		"@types/node": "^17.0.24",
-		"bumpp": "^7.1.1",
-		"c8": "^7.11.0",
-		"esno": "^0.14.1",
-		"plop": "^3.0.5",
-		"tsup": "^5.12.5",
-		"typescript": "^4.6.3",
-		"vite": "^2.9.5",
+		"bumpp": "^7.2.0",
+		"c8": "^7.14.0",
+		"plop": "^3.1.2",
+		"tsup": "^5.12.9",
+		"tsx": "^4.19.1",
+		"typescript": "^4.9.5",
+		"vite": "5.4.8",
 		"vitest": "^0.1.27"
 	}
 }
